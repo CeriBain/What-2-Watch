@@ -1,3 +1,5 @@
+import MovieCard from "../components/MovieCard";
+
 function Home() {
   const movies = [
     { id: 1, title: "Dark Knight", release_date: "2008" },
@@ -7,5 +9,13 @@ function Home() {
     { id: 5, title: "The Social Network", release_date: "2010" },
   ];
 
-  return <div className="home"></div>;
+  return (
+    <div className="home">
+      <div className="movie-grid">
+        {movies.map((movie) => (
+          <MovieCard movie={movie} key={movie.id} />
+        ))}
+      </div>
+    </div>
+  );
 }
