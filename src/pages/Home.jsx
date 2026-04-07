@@ -9,8 +9,17 @@ function Home() {
     { id: 5, title: "The Social Network", release_date: "2010" },
   ];
 
+  const handleSearch = () => {};
+
   return (
     <div className="home">
+      <form onSubmit={handleSearch} className="search-form">
+        <input
+          type="text"
+          placeholder="search for movies..."
+          className="search-input"
+        ></input>
+      </form>
       <div className="movie-grid">
         {movies.map((movie) => (
           <MovieCard movie={movie} key={movie.id} />
