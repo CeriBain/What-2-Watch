@@ -19,6 +19,10 @@ function Home() {
           placeholder="search for movies..."
           className="search-input"
         ></input>
+        <button type="submit" className="search-button">
+          {" "}
+          Search{" "}
+        </button>
       </form>
       <div className="movie-grid">
         {movies.map((movie) => (
